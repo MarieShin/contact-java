@@ -9,25 +9,21 @@ public class FileContactService implements ContactService {
 
 	@Override
 	public void registContact(Contact contact) {
-		// TODO Auto-generated method stub
-
+		System.out.println("contact regist ok..");
 	}
 
 	@Override
 	public List<Contact> listContact() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public Contact detailContact(String name) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void removeContact(String name) {
-		// TODO Auto-generated method stub
 
 	}
 
