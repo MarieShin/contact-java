@@ -1,60 +1,45 @@
 package kr.co.kosta.contact;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.InputStreamReader;
 
-import kr.co.kosta.contact.model.Contact;
+import kr.co.kosta.contact.view.ContactView;
 
 public class ContactManagerMain {
 	public static void main(String[] args) throws Exception {
 
-		// 1. »ç¿ëÀÚ¿¡°Ô È­¸éÀ» º¸¿©ÁØ´Ù. (View)
+		// 1. ì‚¬ìš©ìžì—ê²Œ í™”ë©´ì„ ë³´ì—¬ì¤€ë‹¤. (View)
 		/*
-		 * ======================= 
-		 * 1. ¿¬¶ôÃ³ µî·Ï 
-		 * 2. ¿¬¶ôÃ³ ÀüÃ¼º¸±â 
-		 * Q. Á¾·á
-		 * ======================= 
-		 * ¼±ÅÃ >
+		 * ======================= 1. ì—°ë½ì²˜ ë“±ë¡ 2. ì—°ë½ì²˜ ì „ì²´ë³´ê¸° Q. ì¢…ë£Œ
+		 * ======================= ì„ íƒ >
 		 * 
-		 * 1. ¼±ÅÃÇÏ¸é -->
+		 * 1. ì„ íƒí•˜ë©´ -->
 		 * 
-		 * »ç¿ëÀÚ ÀÌ¸§°ú ÀÌ¸ÞÀÏ, ³ªÀÌ, ÁÖ¼Ò¸¦ °¢°¢ ÀÔ·ÂÇØ ÁÖ¼¼¿ä(±¸ºÐÀÚ´Â spaceÀÔ´Ï´Ù.)
+		 * ì‚¬ìš©ìž ì´ë¦„ê³¼ ì´ë©”ì¼, ë‚˜ì´, ì£¼ì†Œë¥¼ ê°ê° ìž…ë ¥í•´ ì£¼ì„¸ìš”(êµ¬ë¶„ìžëŠ” spaceìž…ë‹ˆë‹¤.)
 		 * 
 		 */
 
-		show();
+		ContactView view = new ContactView();
+		view.run();
 
-		// ÄÜ¼Ö(ÅÍ¹Ì³Î)À» ÅëÇØ »ç¿ëÀÚÀÔ·ÂÀ» ¹ÞÀ» ¼ö ÀÖ´Â ½ºÆ®¸² »ý¼º
+		// ì½˜ì†”(í„°ë¯¸ë„)ì„ í†µí•´ ì‚¬ìš©ìžìž…ë ¥ì„ ë°›ì„ ìˆ˜ ìžˆëŠ” ìŠ¤íŠ¸ë¦¼ ìƒì„±
 		/**
-		 * System.in Å°º¸µå, System.out ¸ð´ÏÅÍ
+		 * System.in í‚¤ë³´ë“œ, System.out ëª¨ë‹ˆí„°
 		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		switch (br.readLine()) {
-		case "1":
-			System.out.println("»ç¿ëÀÚ ÀÌ¸§°ú ÀÌ¸ÞÀÏ, ³ªÀÌ, ÁÖ¼Ò¸¦ °¢°¢ ÀÔ·ÂÇØ ÁÖ¼¼¿ä(±¸ºÐÀÚ´Â spaceÀÔ´Ï´Ù.)");
-			br.readLine();
-			break;
-		case "2":
-			break;
-		case "Q":
-			break;
-		default:
+	
 
-		}
-
-		// System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+		// System.out.println("ì´ë¦„ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”: ");
 		// String name = br.readLine();
 		//
-		// System.out.println("ÀÌ¸ÞÀÏÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+		// System.out.println("ì´ë©”ì¼ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”: ");
 		// String email = br.readLine();
 		//
-		// System.out.println("³ªÀÌ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+		// System.out.println("ë‚˜ì´ë¥¼ ìž…ë ¥í•´ ì£¼ì„¸ìš”: ");
 		// String age = br.readLine();
 		//
-		// System.out.println("Áö¿ªÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä: ");
+		// System.out.println("ì§€ì—­ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”: ");
 		// String address = br.readLine();
 
 		// System.out.println(typed);
@@ -65,12 +50,4 @@ public class ContactManagerMain {
 
 	}
 
-	public static void show() {
-		System.out.println("=======================");
-		System.out.println("1. ¿¬¶ôÃ³ µî·Ï");
-		System.out.println("2. ¿¬¶ôÃ³ ÀüÃ¼º¸±â");
-		System.out.println("Q. Á¾·á");
-		System.out.println("=======================");
-		System.out.println("¼±ÅÃ >");
-	}
 }
